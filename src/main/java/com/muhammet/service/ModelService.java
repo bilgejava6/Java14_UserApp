@@ -23,4 +23,8 @@ public class ModelService {
     public List<Model> getAllByMarkaId(Long markaId) {
         return repository.findAllByMarkaId(markaId);
     }
+
+    public List<Model> findAll() {
+        return  repository.findAll();
+    }
 }

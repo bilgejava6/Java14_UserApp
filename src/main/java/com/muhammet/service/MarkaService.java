@@ -22,4 +22,8 @@ public class MarkaService {
     public List<Marka> getAll() {
         return repository.findAll();
     }
+
+    public List<Marka> findAll() {
+        return repository.findAll();
+    }
 }

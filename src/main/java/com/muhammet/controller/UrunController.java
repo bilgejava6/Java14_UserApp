@@ -1,6 +1,7 @@
 package com.muhammet.controller;
 
 import com.muhammet.dto.request.UrunSaveRequestDto;
+import com.muhammet.dto.response.UrunGetAllResponseDto;
 import com.muhammet.entity.Marka;
 import com.muhammet.entity.Model;
 import com.muhammet.entity.Urun;
@@ -30,7 +31,7 @@ public class UrunController {
 
     @GetMapping("/get-all")
     @CrossOrigin("*")
-    public ResponseEntity<List<Urun>> getAll(){
+    public ResponseEntity<List<UrunGetAllResponseDto>> getAll(){
         return ResponseEntity.ok(urunService.getAll());
     }
 

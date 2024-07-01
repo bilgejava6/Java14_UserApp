@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "tblurun")
+@NamedQuery(name = "joinMarkaAndModel", query = "select u.ad, u.fiyat, u.stok, m.ad as markaAdi, mo.ad as modelAdi from Urun u left join Marka m on m.id=u.markaId left join Model mo on mo.id=u.modelId")
 public class Urun {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
