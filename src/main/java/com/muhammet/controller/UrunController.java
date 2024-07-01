@@ -23,30 +23,36 @@ public class UrunController {
     private final UrunService urunService;
 
     @PostMapping("/urun-save")
+    @CrossOrigin("*")
     public ResponseEntity<Urun> urunSave(@RequestBody UrunSaveRequestDto dto){
         return ResponseEntity.ok(urunService.save(dto));
     }
 
     @GetMapping("/get-all")
+    @CrossOrigin("*")
     public ResponseEntity<List<Urun>> getAll(){
         return ResponseEntity.ok(urunService.getAll());
     }
 
     @PostMapping("marka-save")
+    @CrossOrigin("*")
     public ResponseEntity<Marka> markaSave(String ad){
         return ResponseEntity.ok(markaService.save(ad));
     }
 
     @PostMapping("model-save")
+    @CrossOrigin("*")
     public ResponseEntity<Model> modelSave(String ad,Long markaId){
         return ResponseEntity.ok(modelService.save(ad,markaId));
     }
 
     @GetMapping("/get-all-marka")
+    @CrossOrigin("*")
     public ResponseEntity<List<Marka>> getAllMarka(){
         return ResponseEntity.ok(markaService.getAll());
     }
     @GetMapping("/get-all-by-marka-id")
+    @CrossOrigin("*")
     public ResponseEntity<List<Model>> getAllByMarkaId(Long markaId){
         return ResponseEntity.ok(modelService.getAllByMarkaId(markaId));
     }

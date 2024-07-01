@@ -19,6 +19,7 @@ public class UrunService {
                       .modelId(dto.getModelId())
                       .fiyat(dto.getFiyat())
                       .stok(dto.getStok())
+                      .ad(dto.getAd())
               .build());
     }
 
